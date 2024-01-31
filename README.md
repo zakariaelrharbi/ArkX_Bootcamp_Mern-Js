@@ -1,0 +1,2 @@
+Learn the fundamentals of the MERN Stack Technologies.
+Modern Web applications have greater demands than ever before. The expectations from today's applications have become increasingly more complex, from being available 24/7 around the world to complex scenarios with an efficient mix of rich user experiences built on the client using JavaScript and communicating efficiently through seamless web APIs.

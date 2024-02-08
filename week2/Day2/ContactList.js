@@ -1,112 +1,67 @@
 // a Node.js application that allows users to store and retrieve contacts.
 //  Each contact should have a name and a phone number. 
-const EventEmitter = require("events");
-const readline = require("readline");
-let contacts = [];
-const eventEmitter = new EventEmitter();
+const readline = require('readline');
 
+const contacts = [];
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
+    input: process.stdin,
+    output: process.stdout
 });
-function prompt(question) {
-    return new Promise((resolve, reject) => {
-        rl.question(question, (userInput) =>{
-            resolve(userInput);
-        })
+
+
+const contactMenu = () => {
+    rl.question(`|----------------------------------|\nChoose One of the Option Below\n1-Add a Contact\n2-View all contacts\n3-Search for a contact\n4-Exit\n`,(val)=>{
+        switch (val) {
+            case '1':
+               { addContact();
+                break;}
+            case '2':
+                {viewContact();
+                break;
+                }
+            case '3':
+                {searchContact();
+                break;}
+            case '4':{
+                rl.close();
+                break;
+            }
+            default:{
+                console.log(`choose right number`);
+                contactMenu()
+            }
+        }
     })
 }
-rl.question('enter "add" to add a contact \nenter "find" to find a contact\n', async (input) => {
-    if (input == "add") {
-      const name = await prompt(`enter your name\n`);
-      const phoneNumber = await prompt(`enter your phone number\n`);
-      eventEmitter.emit("add", name, phoneNumber);
-    } else if (input == "find") {
-      const lookingfor = await prompt("enter the name you wanna find");
-      eventEmitter.emit("find", lookingfor);
-    }
-  }
-);
-eventEmitter.on("add", (name, phoneNumber) => {
-  contacts[name] = phoneNumber;
-  console.log(contacts);
-  console.log(
-    `Contact ${name} with phone number ${phoneNumber} added successfully.`
-  );
-});
 
-eventEmitter.on("ViewAllContacts", ()=>{
-   console.log(contacts);
-});
-// Simulate an event occurrence
-eventEmitter.on("find", (lookingfor) => {
-  if (x in contacts === lookingfor) {
-    console.log(`Contact found - ${x}: ${contacts[x]}`);
-  } else {
-    console.log(`Contact ${x} not found.`);
-  }
-});
+const addContact = () => {
+    rl.question(`Enter Contact Name : `,(name)=>{
+        rl.question(`Enter Contact Number : `,(number)=>{
+            contacts.push({name:name,number:number})
+            console.log(`Contact Added Successfully`);
+            contactMenu();
+        })
+    })
+};
+const viewContact = () => {
+    contacts.forEach((contact) => console.log(`Name: ${contact.name}\nPhone Number: ${contact.number}`))
+    contactMenu();
+};
+const searchContact = () => {
+    rl.question(`Enter Searched Contact name:\n`,(name) => {
+        let result = contacts.find((contact) => contact.name === name);
+        if (result) {
+            console.log(`Contact Found\nName: ${result.name}\nPhone Number: ${result.number}`);
+        }
+        else
+            console.log(`Contact Not Found`);
+        rl.question(`Tap 0 to go back to menu other to exit\n`,(val)=>{
+            if (val === '0') {
+                contactMenu();
+            }else
+                rl.close();
+        })
+    })
+};
 
-eventEmitter.on("close",()=>{
-   
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// backup
-// const readline = require('readline');
-// const rl = readline.createInterface({input: process.stdin, output: process.stdout});
-// let myObject = {};
-// rl.question(`What's Your Name? \n`, (name) => {
-//     rl.question(`Enter Your Number:`, (num)=>{
-//         if(name.length > 0){
-//             console.log(`Welcome ${name}!`);
-//             rl.close();
-//         }
-//         else
-//         {
-//             rl.setPrompt(`Please enter your Name\n`);
-//             rl.prompt();
-            
-//             rl.on('line', (name)=>{
-//                 if(name.length > 0){
-//                     console.log(`Welcome ${name}!`);
-//                     rl.close();
-//                 }
-//                 else{
-//                     rl.setPrompt(`Please Enter Your Name!\n`);
-//                     rl.prompt();
-//                 }
-//             });
-//         }
-//         if(name.length > 0){
-//             console.log(`Your number: ${num}!`);
-//             rl.close();
-//         }
-//         myObject.name = name;
-//         myObject.num = num;
-//         console.log(myObject);
-//     })
-// });
+contactMenu()

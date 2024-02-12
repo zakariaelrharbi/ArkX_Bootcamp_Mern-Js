@@ -8,7 +8,6 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-
 const contactMenu = () => {
     rl.question(`|----------------------------------|\nChoose One of the Option Below\n1-Add a Contact\n2-View all contacts\n3-Search for a contact\n4-Exit\n`,(val)=>{
         switch (val) {

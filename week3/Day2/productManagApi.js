@@ -1,6 +1,5 @@
 const express = require('express');
 const products = require('./products');
-const { log } = require('console');
 const app = express();
 const port = 3000;
 app.use(express.json());

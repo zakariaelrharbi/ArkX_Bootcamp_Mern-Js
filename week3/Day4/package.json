@@ -1,0 +1,17 @@
+{
+  "name": "day4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "draft.js",
+  "scripts": {
+    "start": "nodemon middleware.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

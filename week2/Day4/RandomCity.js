@@ -25,7 +25,7 @@ const weatherData = async (city) => {
   try {
     const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${city.latitude}&longitude=${city.longitude}&current_weather=true`);
     const data = await response.json();
-    return data.current_weather.temperature_2m; // Assuming the temperature key is 'temperature_2m'
+    return data.current_weather.temperature + ' ' + data.current_weather_units.temperature; // Assuming the temperature key is 'temperature_2m'
   } catch (error) {
     console.error(`Error fetching weather data: ${error.message}`);
     throw error; // Propagate the error
@@ -45,7 +45,7 @@ async function deleteExistingFile(cityName) {
 
 async function writeTemperatureToFile(cityName, temperature) {
   try {
-    fs.writeFileSync(`${cityName}.txt`, `Temperature in ${cityName}: ${temperature}°C`);
+    fs.writeFileSync(`${cityName}.txt`, `Temperature in ${cityName}: ${temperature}`);
     console.log(`Temperature for ${cityName} written to ${cityName}.txt`);
   } catch (error) {
     throw new Error(`Failed to write temperature to ${cityName}.txt: ${error.message}`);

@@ -1,1 +1,1 @@
-Temperature in casablanca: undefined°C
+Temperature in casablanca: 21.7 °C

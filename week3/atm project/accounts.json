@@ -1,0 +1,25 @@
+[
+    {
+        "id": 792229,
+        "name": "Ismail Ajizou",
+        "pin": 1249,
+        "balance": 5900,
+        "transactions": [
+            {
+                "type": "deposit",
+                "amount": 5000,
+                "date": "Fri Feb 16 2024"
+            },
+            {
+                "type": "withdraw",
+                "amount": 100,
+                "date": "Fri Feb 16 2024"
+            },
+            {
+                "type": "deposit",
+                "amount": 1000,
+                "date": "Fri Feb 16 2024"
+            }
+        ]
+    }
+]

@@ -12,7 +12,7 @@ const users = [
 
 const app = express();
 app.use(express.json())
-// Middleware
+// Middleware 5 ` 
 app.use(express.urlencoded({ extended: false }));
 app.use(session({ secret: 'your-secret-key', resave: false, saveUninitialized: false }));
 app.use(cookieParser());

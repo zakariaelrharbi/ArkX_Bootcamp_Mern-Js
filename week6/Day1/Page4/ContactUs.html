@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>FrajaFlix</title>
+</head>
+<body>
+    <header>
+        <a class="Logo" href="Movie.html"><b>FrajaFlix</b></a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Genres</a></li>
+            <li><a href="#">More</a></li>
+        </ul>
+        <button type="button">Sign In</button>
+        <button type="button">Sign Up</button>
+        <form id="form">
+            <input type="search" id="query" name="search" placeholder="Find movies...">
+            <button>Search</button>
+            <br>
+            <!-- languages selection -->
+            <form action="#">
+                <select name="Lan" id="Lan">
+                    <option value="En">EN</option>
+                    <option value="Fr">FR</option>
+                    <option value="Ar">AR</option>
+                    <option value="Sp">SP</option>
+                </select>
+            </form>
+            <button>Subscribe</button>
+        </form>
+    </nav>
+
+    <main>
+        <h2>Say Hi ! Don't Be Shy.</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, quia?
+        </p>
+        <p class="social-media">
+            <a class="Facebook" href="#">Facebook</a>
+            <a class="Instagram" href="#">Instagram</a>
+            <a class="X" href="#">X</a>
+            <br>
+        </p>
+        
+        <section>
+            <!-- this is how to add text area -->
+            <div>
+                <label for="Message">Message</label><br>
+                <textarea id="story" name="story" rows="7" cols="40">
+                </textarea>
+            </div>
+            <br>
+            <div>
+                <label for=" YourName">Your Name</label><br>
+                <input type="text" id="YourName" name="YourName" placeholder="YourName"><br>
+            </div>
+            <br>
+            <div>
+                <label for=" email">Email</label><br>
+                <input type="email" id="email" name="email" placeholder="email@gmail.com">
+            </div>
+            <br>
+            <input type="button" value="Send Message">
+        </section>
+        <br>
+    </main>
+    <footer>
+        <section id="Logo">
+            <a class="Logo" href="../Page1/landingpage.html"><b>FrajaFlix</b></a>
+        </section>
+        <br>
+        <section id="social media">
+            <p class="social-media">
+                Connect With Us<br>
+                <a class="Facebook" href="#">Facebook</a>
+                <a class="Instagram" href="#">Instagram</a>
+                <a class="X" href="#">X</a>
+                <br>
+                Help
+                <ul>
+                    <li><a href="#">My Acoount</a></li>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </p>
+            <p class="download-app">
+                Download Movies App <br>
+                <a href="#"><img src="../images/android.webp" alt="" width="150" height=""></a><br>
+                <a href="#"><img src="../images/apple.webp" alt="" width="150" height=""></a>
+            </p>
+            <p class="Copyright">
+                Copyright © 2024 Movie App. All rights reserved.
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </p>
+            <p>
+                <a href="#">Top</a>
+            </p>
+        </section>
+    </footer>
+</body>
+</html>

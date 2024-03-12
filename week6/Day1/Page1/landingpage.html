@@ -5,26 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
     <title>FrajaFlix</title>
 </head>
 <body>
     
     <!-- Header Section -->
-    <header class="header">
-        <a class="Logo" href="../Page1/landingpage.html"><b>FrajaFlix</b></a>
+    <header class="container">
+        <div class="Logo">
+            <a href="../Page1/landingpage.html">FrajaFlix</a>
+        </div>
         <!-- Navigation Section -->
         <nav class="navbar">
-            <!-- Navigation Links -->
-            <a href="#">Home</a>
-            <a href="#">Movies</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-            <!-- Search Form -->
+            <div class="Link">
+                <!-- Navigation Links -->
+                <a href="#">Home</a>
+                <a href="#">Movies</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </div>
         </nav>
-        <form id="form">
-            <input type="search" id="query" name="search" placeholder="Find movies...">
-            <button class="btn">Search</button>
+        <!-- Search Form -->
+        <div class="search-form">
+            <form id="form">
+                <input type="search" id="query" name="search" placeholder="Find movies...">
+                <button class="btn">Search</button>
+            </form>
+        </div>
 
+        <div class="Language">
             <!-- Language Selection -->
             <select name="Lan" id="Lan">
                 <option value="En">EN</option>
@@ -32,11 +41,16 @@
                 <option value="Ar">AR</option>
                 <option value="Sp">SP</option>
             </select>
+        </div>
 
+        <div class="Subscribe">
             <!-- Subscribe Button -->
             <button class="btn">Subscribe</button>
-        </form>
+        </div>
+
     </header>
+
+
     <!-- Main Content Section -->
     <main>
         <!-- video Section -->
@@ -57,7 +71,7 @@
             </p>
             <br>
             <p class="name">
-                <a href="#">John Wick 4</a><br>
+                <a class="movieName" href="#"><b>John Wick 4</b></a><br>
                 <br>
                 8.2<br>
                 2023 <br>
@@ -66,9 +80,8 @@
                 Enjoy exclusive Amazon Originals as well as popular movies an TV shows for USD 120z/month. Watch now, cancel anytime. <br>
             </p>
             <p class="link">
-                <a href="#">Play Now</a>
-                <a href="#">Watch Later</a>
-                <a href="#">Added watchlist</a>
+                <button class="btn">Play Now</button>
+                <button class="btn">Watch Later</button>
             </p>
         </section>
         <br>
@@ -80,166 +93,212 @@
                 <br>
                 <a href="#">View All</a>
             </p>
-            <figure>
+            <article>
                 <img src="../images/dd.webp" alt="" width="" height="300">
-                        <p>
-                            <a href="#">Added to My List</a>
-                            <a href="#">Add to My List</a>
-                        </p>
-                        <br>
-                        <p>
-                            <a href="#">After</a>
-                        </p>
-                        <br>
-                        <p>
-                            TV-MA <br>
-                            2024 <br>
-                            1 H 20 mins <br>
-                            <p>
-                                <a href="#">Drama</a>
-                                <a href="#">Romance</a>
-                            </p>
-                        </p>
-            </figure>
-            <figure>
+                <p>
+                    <a href="#">Added to My List</a>
+                    <a href="#">Add to My List</a>
+                </p>
+                <br>
+                <p>
+                    <a href="#">After</a>
+                </p>
+                <br>
+                <p>
+                    TV-MA <br>
+                    2024 <br>
+                    1 H 20 mins <br>
+                    <p>
+                        <a href="#">Drama</a>
+                        <a href="#">Romance</a>
+                    </p>
+                </p>
+            </article>
+            
+            <article>
                 <img src="../images/TheGrayMan2.webp" alt="" width="" height="300">
-                        <p>
-                            <a href="#">Added to My List</a>
-                            <a href="#">Add to My List</a>
-                        </p>
-                        <br>
-                        <p>
-                            <a href="#">After</a>
-                        </p>
-                        <br>
-                        <p>
-                            TV-MA <br>
-                            2024 <br>
-                            1 H 20 mins <br>
-                            <p>
-                                <a href="#">Drama</a>
-                                <a href="#">Romance</a>
-                            </p>
-                        </p>
-            </figure>
-            <figure>
+                <p>
+                    <a href="#">Added to My List</a>
+                    <a href="#">Add to My List</a>
+                </p>
+                <br>
+                <p>
+                    <a href="#">After</a>
+                </p>
+                <br>
+                <p>
+                    TV-MA <br>
+                    2024 <br>
+                    1 H 20 mins <br>
+                    <p>
+                        <a href="#">Drama</a>
+                        <a href="#">Romance</a>
+                    </p>
+                </p>
+            </article>
+            
+            <article>
                 <img src="../images/161485.webp" alt="" width="" height="300">
-                        <p>
-                            <a href="#">Added to My List</a>
-                            <a href="#">Add to My List</a>
-                        </p>
-                        <br>
-                        <p>
-                            <a href="#">After</a>
-                        </p>
-                        <br>
-                        <p>
-                            TV-MA <br>
-                            2024 <br>
-                            1 H 20 mins <br>
-                            <p>
-                                <a href="#">Drama</a>
-                                <a href="#">Romance</a>
-                            </p>
-                        </p>
-            </figure>
-            <figure>
+                <p>
+                    <a href="#">Added to My List</a>
+                    <a href="#">Add to My List</a>
+                </p>
+                <br>
+                <p>
+                    <a href="#">After</a>
+                </p>
+                <br>
+                <p>
+                    TV-MA <br>
+                    2024 <br>
+                    1 H 20 mins <br>
+                    <p>
+                        <a href="#">Drama</a>
+                        <a href="#">Romance</a>
+                    </p>
+                </p>
+            </article>
+            
+            <article>
                 <img src="../images/2025.webp" alt="" width="" height="300">
-                        <p>
-                            <a href="#">Added to My List</a>
-                            <a href="#">Add to My List</a>
-                        </p>
-                        <br>
-                        <p>
-                            <a href="#">After</a>
-                        </p>
-                        <br>
-                        <p>
-                            TV-MA <br>
-                            2024 <br>
-                            1 H 20 mins <br>
-                            <p>
-                                <a href="#">Drama</a>
-                                <a href="#">Romance</a>
-                            </p>
-                        </p>
-            </figure>
-            <figure>
+                <p>
+                    <a href="#">Added to My List</a>
+                    <a href="#">Add to My List</a>
+                </p>
+                <br>
+                <p>
+                    <a href="#">After</a>
+                </p>
+                <br>
+                <p>
+                    TV-MA <br>
+                    2024 <br>
+                    1 H 20 mins <br>
+                    <p>
+                        <a href="#">Drama</a>
+                        <a href="#">Romance</a>
+                    </p>
+                </p>
+            </article>
+            
+            <article>
                 <img src="../images/behind-her-eyes-netflix-151207.webp" alt="" width="" height="300">
-                        <p>
-                            <a href="#">Added to My List</a>
-                            <a href="#">Add to My List</a>
-                        </p>
-                        <br>
-                        <p>
-                            <a href="#">After</a>
-                        </p>
-                        <br>
-                        <p>
-                            TV-MA <br>
-                            2024 <br>
-                            1 H 20 mins <br>
-                            <p>
-                                <a href="#">Drama</a>
-                                <a href="#">Romance</a>
-                            </p>
-                        </p>
-            </figure>
+                <p>
+                    <a href="#">Added to My List</a>
+                    <a href="#">Add to My List</a>
+                </p>
+                <br>
+                <p>
+                    <a href="#">After</a>
+                </p>
+                <br>
+                <p>
+                    TV-MA <br>
+                    2024 <br>
+                    1 H 20 mins <br>
+                    <p>
+                        <a href="#">Drama</a>
+                        <a href="#">Romance</a>
+                    </p>
+                </p>
+            </article>
+            
         </section>
         <!-- Navigation between Sections -->
         <div>
-            <a href="#">&laquo; Previous</a>
-            <a href="#">Next &raquo;</a>
+            <button class="btn">&#60;</button>
+            <button class="btn">&#62;</button>
         </div><br>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <!-- Logo Section -->
-        <section id="Logo">
-            <a class="Logo" href="../Page1/landingpage.html"><b>FrajaFlix</b></a>
-        </section>
+        <div class="container">
+            <div class="footer-content">
+                <a class="Logo" href="../Page1/landingpage.html"><b>FrajaFlix</b></a>
+            </div>
 
-        <!-- Social Media Section -->
-        <section id="socialMedia">
-            <p class="social-media">
-                Connect With Us<br>
-                <a class="Facebook" href="#">Facebook</a>
-                <a class="Instagram" href="#">Instagram</a>
-                <a class="X" href="#">X</a>
-                <br>
+            <div class="footer-content">
+                <h3>Connect With Us</h3>
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-x"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-github"></i></a>
+            </div>
 
-                <!-- Help Section -->
-                Help
-                <ul>
+            <div class="footer-content">
+                <h3>Help</h3>
+                <ul class="list">
                     <li><a href="#">My Account</a></li>
                     <li><a href="#">Customer Support</a></li>
                     <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Jobs</a></li>
                 </ul>
-            </p>
+            </div>
 
             <!-- Download App Section -->
-            <p class="download-app">
-                Download Movies App <br>
-                <a href="#"><img src="../images/android.webp" alt="" width="150" height=""></a><br>
-                <a href="#"><img src="../images/apple.webp" alt="" width="150" height=""></a>
-            </p>
+            <div class="download-app">
+                <h3>Download Movies App </h3>
+                <img src="../images/android.webp" alt="" width="150" height=""><br>
+                <img src="../images/apple.webp" alt="" width="150" height="">
+            </div>
+        
 
-            <!-- Copyright Section -->
-            <p class="Copyright">
-                Copyright © 2024 Movie App. All rights reserved.
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </p>
-
-            <!-- Top Link -->
-            <p>
-                <a href="#">Top</a>
-            </p>
-        </section>
+        </div>
+        <div class="bottom-bar">
+            <p>Copyright © 2024 Movie App. All rights reserved.</p>
+            <a  href="#">Privacy Policy</a> 
+            <a href="#">Terms of Service</a>
+        </div>
     </footer>
 </body>
 </html>
+
+
+<!-- 
+Logo Section
+<section id="Logo">
+    <a class="Logo" href="../Page1/landingpage.html"><b>FrajaFlix</b></a>
+</section> -->
+
+<!-- Social Media Section -->
+<!-- <section class="container">
+    <p class="socialMedia">
+        <h3>Connect With Us</h3>
+        <a class="Facebook" href="#">Facebook</a>
+        <a class="Instagram" href="#">Instagram</a>
+        <a class="X" href="#">X</a>
+    </p> -->
+    <!-- Help Section -->
+    <!-- <p class="help"> 
+        <h3>Help</h3>
+        <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </p> -->
+
+    <!-- Download App Section -->
+    <!-- <p class="download-app">
+        <h3>Download Movies App </h3>
+            <img src="../images/android.webp" alt="" width="150" height=""><br>
+            <img src="../images/apple.webp" alt="" width="150" height="">
+    </p> -->
+
+    <!-- Copyright Section -->
+    <!-- <p class="Copyright">
+        <h3>Copyright © 2024 Movie App. All rights reserved. </h3>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </p> -->
+
+    <!-- Top Link -->
+    <!-- <p>
+        <a href="#">Top</a>
+    </p>
+</section> -->

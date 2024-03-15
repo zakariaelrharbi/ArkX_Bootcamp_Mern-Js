@@ -111,6 +111,15 @@ li{
     border-radius: 50%;
     margin-right: 10px;
 }
+#playbtn1{
+    background: radial-gradient(274px at 7.4% 17.9%, rgb(82, 107, 248) 0.3%, rgb(167, 139, 252) 90.5%);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
 
 header.sticky .headerbg{
     position: relative;
@@ -197,7 +206,7 @@ header.sticky {
     display: flex;
     justify-content: space-around;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
 }
 .bottom-bar{
     background-color: #7c88f8;
@@ -215,7 +224,63 @@ footer h3{
     padding-bottom: 10px;
     font-weight: 600;
 }
-.icon{
+footer .icon{
     display: flex;
     justify-content: space-evenly;
+}
+.movies{
+    display: flex;
+    gap: 10px;
+}
+.movie-container{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 300px;
+}
+.movie-container img{
+    width: 100%;
+    height: 55vh;
+}
+.nexprev{
+    text-align: center;
+    padding-top: 20px;
+}
+.cat{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.cat h1{
+    font-size: 17px;
+    font-weight: 600;
+    padding-left: 13px;
+}
+.cat a{
+    padding-right: 13px;
+}
+.cat a:hover{
+    color: #7c88f8;
+}
+.Movie img{
+    width:100%;
+}
+.icn{
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 10px;
+}
+.fa-heart:hover{
+    transform: scale(1.2); 
+} 
+.fa-plus:hover{
+    transform: scale(1.2); 
+}
+
+.fa-heart:active{
+    color: red;
+}
+.fa-plus:active{
+    color: red;
 }

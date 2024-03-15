@@ -58,8 +58,11 @@ i{
 
 }
 header{
-    height: 10vh;
+    height: 11vh;
     background: rgba(0, 0, 0, 0.2);
+}
+header #playbtn{
+    margin-left: 20px;
 }
 header .navbar{
     align-items: center;
@@ -69,34 +72,35 @@ header .navbar{
 }
 header nav ul{
     display: inline-block;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 header ul li a{
     transition: all 300ms ease-in-out;
 }
 header ul li a:hover{
-    color: blueviolet;
+    color: #7c88f8;
 }
 .logo a:hover{
-    color: blueviolet;
+    color: #7c88f8;
 }
 header ul li {
     display: inline-block;
     margin-right: 20px;
 }
 li{
-    font-weight: 500;
+    font-weight: 500px
 }
 .btn {
     background: radial-gradient(274px at 7.4% 17.9%, rgb(82, 107, 248) 0.3%, rgb(167, 139, 252) 90.5%);
     color: white;
     border: none;
-    height: 2rem;
-    width: 6.563rem;
+    height: 2.4rem;
+    width: 6.8rem;
     cursor: pointer;
     border-radius: 0.3rem;
     font-size: 15px;
+    margin-right: 10px;
 }
 #playbtn{
     background: radial-gradient(274px at 7.4% 17.9%, rgb(82, 107, 248) 0.3%, rgb(167, 139, 252) 90.5%);
@@ -146,6 +150,7 @@ header.sticky {
     margin-top: 20px;
     margin-bottom: 20px;
     line-height: 40px;
+    display: inline-block;
 }
 .time label{
     width: 40px;
@@ -162,4 +167,55 @@ header.sticky {
 }
 .button p{
     display: inline-block;
+}
+.home_content p{
+    font-size: 20px;
+    line-height: 30px;
+    transition: 0.5s;
+    text-align: justify;
+}
+.home_content #playbtn{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: white;
+    color: #6e7bf1;
+}
+.btn1{
+    background: radial-gradient(274px at 7.4% 17.9%, rgb(82, 107, 248) 0.3%, rgb(167, 139, 252) 90.5%);
+    color: white;
+    border: none;
+    height: 1.8rem;
+    width: 5.3rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    font-size: 15px;
+    margin-right: 10px;
+}
+.container1{
+    background-color: #6e7bf1;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.bottom-bar{
+    background-color: #7c88f8;
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "poppins", sans-serif;
+}
+.bottom-bar p{
+    margin-right: 755px;
+    margin-left: 40px;
+}
+footer h3{
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+.icon{
+    display: flex;
+    justify-content: space-evenly;
 }

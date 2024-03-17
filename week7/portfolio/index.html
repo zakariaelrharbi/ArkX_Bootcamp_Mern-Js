@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zakaria elrharbi - portfolio</title>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- favicon -->
+    <!-- <link rel="icon" href=""> -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Owl caorusel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+</head>
+<body class="bg-[#101017]">
+    <!-- navbar -->
+    <nav class="py-2">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-white text-2xl font-bold">Kilozerko<span class="text-[#079211]">.</span></span>
+                </div>
+                <!-- navlink -->
+                <div class="hidden sm:block ml-auto">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#" class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#" class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium">Work</a>
+                        <a href="#" class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium">About Me</a>
+                        <a href="#" class="text-white border border-[#079211] px-4 rounded-none py-[10px]
+                        hover:bg-[#079211] text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <!-- button Menu button -->
+                <div class="sm:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-white hover:text-[#D1D5DB] focus:outline-none
+                    focus:text-[#D1D5DB]" aria-label="toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>                      
+                    </button>
+                <!-- button Menu button -->
+                </div>
+            </div>
+        </div>
+        <!-- menu that will shown in mobile size -->
+        <div id="mobile-menu" class="hidden sm:hidden hover:text-[#079211]">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">Home</a>
+                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">Services</a>
+                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">Work</a>
+                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">About Me</a>
+                <div class="px-2">
+                    <a href="#" class="text-white border border-[#079211] block px-3 py-2 rounded-none text-base font-medium
+                    hover:bg-[#079211] focus:bg-[#079211] mt-4">Contact</a>                    
+                </div>
+            </div>
+        </div>
+        <!-- menu that will shown in mobile size -->
+    </nav>
+    <!-- navbar -->
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- typed js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <!-- Owl carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- javascript here -->
+    <script>
+        // using j query the menu will toggle when the button menu is clicked on mobile size
+        $(document).ready(function(){
+            $("#mobile-menu-btn").click(function(){
+                $("#mobile-menu").slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -15,3 +15,10 @@ body{
 .btn-primary:hover{
     transform: scale(1.05);
 }
+.card-service{
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.card-service:hover{
+    transform: translateY(-5px);
+}

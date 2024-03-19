@@ -1,151 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>zakaria elrharbi - portfolio</title>
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- favicon -->
-    <!-- <link rel="icon" href=""> -->
+
+    <!-- icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- icon library -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- icon library -->
+    
+    <!-- infinity carousel -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-100%)' },
+                        }
+                    }                    
+                },
+            },
+        };
+    </script>
+    <!-- infinity carousel -->
+
     <!-- link css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Owl caorusel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
-</head>
-<body class="bg-[#101017]">
-    <!-- navbar -->
-    <nav class="py-2">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-white text-2xl font-bold">Kilozerko<span class="text-[#079211]">.</span></span>
-                </div>
-                <!-- navlink -->
-                <div class="hidden sm:block ml-auto">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#" class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="#" class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium">Services</a>
-                        <a href="#" class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium">Work</a>
-                        <a href="#" class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium">About Me</a>
-                        <a href="#" class="text-white border border-[#079211] px-4 rounded-none py-[10px]
-                        hover:bg-[#079211] text-sm font-medium">Contact</a>
-                    </div>
-                </div>
-                <!-- button Menu button -->
-                <div class="sm:hidden flex items-center">
-                    <button id="mobile-menu-btn" type="button" class="text-white hover:text-[#D1D5DB] focus:outline-none
-                    focus:text-[#D1D5DB]" aria-label="toggle menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>                      
-                    </button>
-                <!-- button Menu button -->
-                </div>
-            </div>
-        </div>
-        <!-- menu that will shown in mobile size -->
-        <div id="mobile-menu" class="hidden sm:hidden hover:text-[#079211]">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">Home</a>
-                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">Services</a>
-                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">Work</a>
-                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">About Me</a>
-                <div class="px-2">
-                    <a href="#" class="text-white border border-[#079211] block px-3 py-2 rounded-none text-base font-medium
-                    hover:bg-[#079211] focus:bg-[#079211] mt-4">Contact</a>                    
-                </div>
-            </div>
-        </div>
-        <!-- menu that will shown in mobile size -->
-    </nav>
-    <!-- /navbar -->
-
-<!-- hero -->
-    <section class="hero text-white py-28">
-        <div class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h4 class="text-2xl font-bold text-[#079211] lg:leading-[94px] lg:text-[38px]"> Hello,My Name is Zakaria Elrharbi</h4>
-            <h1 class="text-5xl mt-3 font-bold lg:text-[88px] lg:leading-[94px]"><span id="typed"></span></h1>
-            <p class="mt-4 text-[#808080] font-normal text-base w-full lg:w-3/6 mt-9">I'm From Morroco and I have been working as a Full-Stack developer for 3 months. I'm currently gaining valuable experience through an internship at <a href="#"><span class="underline font-semibold hover:text-[#079211]">ArkXAcademy</span></a> as a full Stack mern developer.</p>
-            <div class="mt-14">
-                <div class="mt-6 flex items-center gap-3">
-                    <a href="#" class="btn-primary bg-[#079211] text-white rounded-none py-3 px-6 text-lg font-medium mr-4">Email me</a>
-                    <a href="#" class="flex items-center text-[#808080] font-bold text-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                        </svg>
-                        <span class="ml-2 hover:underline">Download Cv</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- /hero -->
-
-<!-- Footer -->
-    <footer class="pt-8 pb-6 bg-[#050507]">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:flex justify-between items-start">
-                <span class="text-white text-[26px] font-bold">Kilozerko<span class="text-[#079211]">.</span></span>
-                <div class="w-full links mt-10 md:mt-0 space-y-5 md:w-96 justify-between md:space-y-0 md:flex">
-                    <div class="info">
-                        <h6 class="text-xl text-white font-semibold mb-6">Information</h6>
-                        <ul class="text-[#808080] space-y-3">
-                            <li class="hover:underline"><a href="#">0682883065</a></li>
-                            <li class="hover:underline"><a href="#">zakaria.elrharbi@arkx.academy</a></li>
-                            <li class="hover:underline"><a href="#">Casa Blanca, Morrocco</a></li>
-                        </ul>
-                    </div>
-                    <div class="social">
-                        <h6 class="text-xl text-white font-semibold mb-6">Social Media</h6>
-                        <ul class="text-[#808080] space-y-3">
-                            <li class="hover:underline"><a href="#">Instagram</a></li>
-                            <li class="hover:underline"><a href="#">Linkdin</a></li>
-                            <li class="hover:underline"><a href="#">Behance</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <hr class="h-[2px] w-full bg-[#313131] mt-16">
-            <div class="flex mt-5 justify-between items-start text-white">
-                <small>Design by <span class="text-[#079211]">Kilozerko</span></small>
-                <small>Copyright &copy; 2024</small>
-            </div>
-        </div>
-    </footer>
-<!-- /Footer -->
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- typed js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <!-- Owl carousel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </head>
+  <body class="bg-[#101017]">
+    <!-- navbar -->
+    <nav class="py-2">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <span class="text-white text-2xl font-bold"
+              >Kilozerko<span class="text-[#079211]">.</span></span
+            >
+          </div>
+          <!-- navlink -->
+          <div class="hidden sm:block ml-auto">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="#"
+                class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium"
+                >Services</a
+              >
+              <a
+                href="#"
+                class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium"
+                >Work</a
+              >
+              <a
+                href="#"
+                class="text-white hover:text-[#079211] hover:underline px-3 py-2 text-sm font-medium"
+                >About Me</a
+              >
+              <a
+                href="#"
+                class="text-white border border-[#079211] px-4 rounded-none py-[10px] hover:bg-[#079211] text-sm font-medium"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <!-- button Menu button -->
+          <div class="sm:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              type="button"
+              class="text-white hover:text-[#D1D5DB] focus:outline-none focus:text-[#D1D5DB]"
+              aria-label="toggle menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+            <!-- button Menu button -->
+          </div>
+        </div>
+      </div>
+      <!-- menu that will shown in mobile size -->
+      <div id="mobile-menu" class="hidden sm:hidden hover:text-[#079211]">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="#"
+            class="text-white hover:underline block px-3 py-2 text-base font-medium"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-white hover:underline block px-3 py-2 text-base font-medium"
+            >Services</a
+          >
+          <a
+            href="#"
+            class="text-white hover:underline block px-3 py-2 text-base font-medium"
+            >Work</a
+          >
+          <a
+            href="#"
+            class="text-white hover:underline block px-3 py-2 text-base font-medium"
+            >About Me</a
+          >
+          <div class="px-2">
+            <a
+              href="#"
+              class="text-white border border-[#079211] block px-3 py-2 rounded-none text-base font-medium hover:bg-[#079211] focus:bg-[#079211] mt-4"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- menu that will shown in mobile size -->
+    </nav>
+    <!-- /navbar -->
+
+    <!-- hero -->
+    <section class="hero text-white py-28">
+      <div class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h4
+          class="text-2xl font-bold text-[#079211] lg:leading-[94px] lg:text-[38px]"
+        >
+          Hello,My Name is Zakaria Elrharbi
+        </h4>
+        <h1 class="text-5xl mt-3 font-bold lg:text-[88px] lg:leading-[94px]">
+          <span id="typed"></span>
+        </h1>
+        <p
+          class="mt-4 text-[#808080] font-normal text-base w-full lg:w-3/6 mt-9"
+        >
+          I'm From Morroco and I have been working as a Full-Stack developer for
+          3 months. I'm currently gaining valuable experience through an
+          internship at
+          <a href="#"
+            ><span class="underline font-semibold hover:text-[#079211]"
+              >ArkXAcademy</span
+            ></a
+          >
+          as a full Stack mern developer.
+        </p>
+        <div class="mt-14">
+          <div class="mt-6 flex items-center gap-3">
+            <a
+              href="Contact.html"
+              target="_blank"
+              class="btn-primary bg-[#079211] text-white rounded-none py-3 px-6 text-lg font-medium mr-4"
+              >Email Me</a
+            >
+            <a
+              href="./Mon Cv.pdf"
+              target="_blank"
+              class="flex items-center text-[#808080] font-bold text-lg border border-[#079211] hover:bg-[#079211] py-3 px-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-white hover:underline"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                />
+              </svg>
+              <span class="ml-2 hover:underline text-white">Download Cv</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /hero -->
+    <!-- Services -->
+        <section class="services">
+            <div class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-6">
+                <div class="block md:flex items-start justify-between">
+                    <h2 class="text-white text-3xl lg:text-5xl font-bold mb-2 w-full md:w-1/2 lg:w-3/5">1+ years experience working</h2>
+                    <div class="mt-6 md:mt-0 w-full md:w-[360px]">
+                        <div class="flex items-center">
+                            <hr class="w-14 border-t-2 border-[#079211] mr-4">
+                            <h6 class="text-[#079211] font-bold text-xl mr-4">Services</h6>
+                        </div>
+                        <p class="mt-2 text-[#808080]">Discover the best services i offer, designed to ensure the success of your project.</p>
+                    </div>
+                </div>
+                <!-- cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20 mb-20">
+                  <!-- card1 ui/ux -->
+                    <div class="card-service bg-[#313131] shadow-md rounded-none px-6 py-16" style="position: relative;">
+                        <svg width="100%" height="6" style="position: absolute; bottom: 0; left: 0;" viewBox="0 0 360 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="360" height="6" fill="#079211"/>
+                        </svg>
+                        <i class="fa-solid fa-wand-magic-sparkles text-white text-2xl"></i>
+                        <h5 class="text-white text-2xl font-bold mt-11">UI/UX Design</h5>
+                        <p class="text-[#808080] text-base mb-4 leading-5 mt-5">I offer UI and UX design to provide intuitive interfaces and seamless user experiences, enhancing user satisfaction and engagement.</p>
+                    </div>
+                    <!-- front end -->
+                    <div class="card-service bg-[#313131] shadow-md rounded-none px-6 py-16" style="position: relative;">
+                        <svg width="100%" height="6" style="position: absolute; bottom: 0; left: 0;" viewBox="0 0 360 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="360" height="6" fill="#079211"/>
+                        </svg>
+                        <i class="fa-solid fa-code text-white text-2xl"></i>
+                        <h5 class="text-white text-2xl font-bold mt-11">Front-End Developer</h5>
+                        <p class="text-[#808080] text-base mb-4 leading-5 mt-5">I offer front-end development to craft visually appealing and responsive websites, ensuring optimal user interaction and smooth navigation experiences.</p>
+                    </div>
+                    <!-- backend -->
+                    <div class="card-service bg-[#313131] shadow-md rounded-none px-6 py-16" style="position: relative;">
+                        <svg width="100%" height="6" style="position: absolute; bottom: 0; left: 0;" viewBox="0 0 360 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="360" height="6" fill="#079211"/>
+                        </svg>
+                        <i class="fa-solid fa-terminal text-white text-2xl"></i>
+                        <h5 class="text-white text-2xl font-bold mt-11">Back-End Developer</h5>
+                        <p class="text-[#808080] text-base mb-4 leading-5 mt-5">I offer back-end development to architect robust server-side applications, ensuring efficient data processing and seamless functionality for dynamic web experiences.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    <!-- Services -->
+
+    <!-- my skills with infinity carousel -->
+    <main class="relative flex flex-col justify-center overflow-hidden">
+      <div class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-6">
+        <div class="block md:flex items-start justify-between">
+            <h2 class="text-white text-3xl lg:text-5xl font-bold mb-2 w-full md:w-1/2 lg:w-3/5">All The Tech I use</h2>
+            <div class="mt-6 md:mt-0 w-full md:w-[360px]">
+                <div class="flex items-center">
+                    <hr class="w-14 border-t-2 border-[#079211] mr-4">
+                    <h6 class="text-[#079211] font-bold text-xl mr-4">My Skills</h6>
+                </div>
+                <p class="mt-2 text-[#808080]">
+                  Explore the top-notch skills I offer, meticulously designed to guarantee the success of your project.</p>
+            </div>
+        </div>
+        <div class="w-full max-w-5xl mx-auto px-4 md:px-6 py-20">
+          
+            <div class="text-center">
+
+                <!-- Logo Carousel animation -->
+                <div
+                    x-data="{}"
+                    x-init="$nextTick(() => {
+                        let ul = $refs.logos;
+                        ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                        ul.nextSibling.setAttribute('aria-hidden', 'true');
+                    })"
+                    class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+                >
+                    <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+                        <li>
+                            <img src="./images/js12.png" alt="javascript"/>
+                        </li>
+                        <li>
+                            <img src="./images/NODEJS.png" alt="nodejs"/>
+                        </li>
+                        <li>
+                            <img src="./images/express (1).png" alt="express.js" />
+                        </li>
+                        <li>
+                            <img src="./images/mongo.png" alt="mongodb" />
+                        </li>
+                        <li>
+                            <img src="./images/HTML.png" alt="html5" />
+                        </li>
+                        <li>
+                            <img src="./images/css.png" alt="css3" />
+                        </li>
+                        <li>
+                            <img src="./images/react.png" alt="react" />
+                        </li>
+                        <li>
+                            <img src="./images/TAILWIND.png" alt="tailwind" />
+                        </li>
+                    </ul>  
+                    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+                      <li>
+                        <img src="./images/js12.png" alt="javascript"/>
+                    </li>
+                    <li>
+                        <img src="./images/NODEJS.png" alt="nodejs"/>
+                    </li>
+                    <li>
+                        <img src="./images/express (1).png" alt="express.js" />
+                    </li>
+                    <li>
+                        <img src="./images/mongo.png" alt="mongodb" />
+                    </li>
+                    <li>
+                        <img src="./images/HTML.png" alt="html5" />
+                    </li>
+                    <li>
+                        <img src="./images/css.png" alt="css3" />
+                    </li>
+                    <li>
+                        <img src="./images/react.png" alt="react" />
+                    </li>
+                    <li>
+                        <img src="./images/TAILWIND.png" alt="tailwind" />
+                    </li>
+                  </ul>              
+                </div>
+                <!-- End: Logo Carousel animation -->
+                
+            </div>
+
+        </div>
+    </main>
+    <!-- my skills with infinity carousel -->
+
+    <!-- Footer -->
+    <footer class="pt-8 pb-6 bg-[#050507]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="md:flex justify-between items-start">
+          <span class="text-white text-[26px] font-bold"
+            >Kilozerko<span class="text-[#079211]">.</span></span
+          >
+          <div
+            class="w-full links mt-10 md:mt-0 space-y-5 md:w-96 justify-between md:space-y-0 md:flex"
+          >
+            <div class="info">
+              <h6 class="text-xl text-white font-semibold mb-6">Information</h6>
+              <ul class="text-[#939393] space-y-3">
+                <li class="hover:underline"><a href="#">0682883065</a></li>
+                <li class="hover:underline">
+                  <a href="#">zelrharbi@gmail.com</a>
+                </li>
+                <li class="hover:underline">
+                  <a href="#">CasaBlanca, Morrocco</a>
+                </li>
+              </ul>
+            </div>
+            <div class="social">
+              <h6 class="text-xl text-white font-semibold mb-6">
+                Social Media
+              </h6>
+              <ul
+                class="text-[#939393] lg:flex lg:justify-evenly md:flex md:justify-evenly"
+              >
+                <li class="hover:underline">
+                  <a
+                    href="https://www.instagram.com/zakaria_elrha/"
+                    target="_blank"
+                    ><i class="fa-brands fa-instagram hover:text-[#079211]"></i
+                  ></a>
+                </li>
+                <li class="hover:underline">
+                  <a
+                    href="https://www.linkedin.com/in/zakaria-elrharbi/"
+                    target="_blank"
+                    ><i class="fa-brands fa-linkedin hover:text-[#079211]"></i
+                  ></a>
+                </li>
+                <li class="hover:underline">
+                  <a
+                    href="https://www.behance.net/zakariaelrharbi"
+                    target="_blank"
+                    ><i class="fa-brands fa-behance hover:text-[#079211]"></i
+                  ></a>
+                </li>
+                <li class="hover:underline">
+                  <a href="https://github.com/zakariaelrharbi" target="_blank"
+                    ><i class="fa-brands fa-github hover:text-[#079211]"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="h-[2px] w-full bg-[#313131] mt-16" />
+        <div class="flex mt-5 justify-between items-start text-white">
+          <small>Design by <span class="text-[#079211]">Kilozerko</span></small>
+          <small>Copyright &copy; 2024</small>
+        </div>
+      </div>
+    </footer>
+    <!-- /Footer -->
+
     <!-- javascript here -->
     <script>
-        // using j query the menu will toggle when the button menu is clicked on mobile size
-        $(document).ready(function(){
-            $("#mobile-menu-btn").click(function(){
-                $("#mobile-menu").slideToggle();
-            });
+      // using j query the menu will toggle when the button menu is clicked on mobile size
+      $(document).ready(function () {
+        $("#mobile-menu-btn").click(function () {
+          $("#mobile-menu").slideToggle();
         });
+      });
     </script>
     <!-- this code sets up a typing animation on an HTML element with the id #typed -->
     <script>
-        var typed = new Typed('#typed', {
-            strings: ['Front-end Developer', 'Back-end developer', 'Full-Stack Developer'],
-            typeSpeed: 80,
-            backSpeed: 50,
-            loop: true
-        });
-        
-        </script>
+      var typed = new Typed("#typed", {
+        strings: [
+          "Front-end Developer",
+          "Back-end developer",
+          "Full-Stack Developer",
+        ],
+        typeSpeed: 80,
+        backSpeed: 50,
+        loop: true,
+      });
+    </script>
     <!-- this code sets up a typing animation on an HTML element with the id #typed -->
-</body>
+  </body>
 </html>

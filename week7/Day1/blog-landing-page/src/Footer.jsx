@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Footer = () => {
+  const name1 = "Kilozerko"
+  const name2 = "zakaria" 
   return (
     <div>
         {/*
@@ -202,15 +204,15 @@ const Footer = () => {
 
     <div className="mt-16 border-t border-gray-100 pt-8">
       <p className="text-center text-xs/relaxed text-gray-500">
-        © Company 2024. All rights reserved.
+        © Company {new Date().getFullYear()}. All rights reserved.
+        {/* {new Date().getFullYear()} this code is a javascript code to apply the year of your local time */}
 
         <br />
 
         Created By
-        <a href="#" className="text-gray-700 underline transition hover:text-gray-700/75">kilozerko</a>
-        and
-        <a href="#" className="text-gray-700 underline transition hover:text-gray-700/75"
-          >zakaria</a>.
+        <a href="#" className="text-gray-700  transition hover:text-blue-600"> {name1.toLocaleUpperCase()} </a>
+        and 
+         <a href="#" className="text-gray-700  transition hover:text-blue-600"> {name2.toUpperCase()} </a>.
       </p>
     </div>
   </div>
